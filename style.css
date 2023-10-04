@@ -1,0 +1,761 @@
+﻿
+* Default setting of the html style */
+
+/* ALL CSS ---------------------------------------------------------------------------ALL CSS*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif; 
+}
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;}
+
+body {position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow-x: hidden;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 18px;
+   color: black;
+   line-height: 1.5;  
+   
+}
+.bolded { font-weight: bold; }
+    .emphasized { font-style: italic; }
+
+p{
+	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 20px;	
+}
+
+h1 { font-size: 42px;
+  font-weight: 900; }
+  h2 { font-size: 36px;
+  font-weight:700; }
+  h3 { font-size: 30px;
+    font-weight:600; }
+  h4 { font-size: 24px;
+    font-weight:500; }
+  h5 { font-size: 20px;
+    font-weight:400; }
+  p { font-size: 16px; }
+    
+  @media only screen and (max-width: 910px) {
+    h1 { font-size: 38px; }
+    h2 { font-size: 32px; }
+    h3 { font-size: 28px; }
+    h4 { font-size: 24px; }
+    h5 { font-size: 20px; }
+    }
+    
+    @media only screen and (max-width: 600px) {
+      h1 { font-size: 32px; }
+      h2 { font-size: 26px; }
+      h3 { font-size: 24px; }
+      h4 { font-size: 22px; }
+      h5 { font-size: 18px; }
+      }
+  
+      a:link {
+        text-decoration: none;
+      }
+  
+.btn a{
+	display: block;
+	width: 180px;
+	height: 35px;
+	border: 2px solid #fb2274;
+	line-height: 35px;
+	margin: 25px auto 0;
+	color: #fb2274;
+	text-align: center;
+}
+/* ALL CSS -------------------------------------------------------------------------------ALL CSS*/
+/* START MAIN ONLY START******************************************************************MAIN ONLY**/
+.main_container{
+	position: relative;
+}
+/* END MAIN ONLY END****************************************************************** END MAIN ONLY**/
+
+/* START HEADER + LOGO START******************************************************************************/
+
+header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+ 
+  /* Flex box definition */
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: space-between;
+  z-index:10;
+  color:white;
+  background-color: #414a4f;
+  height: 90px;
+  
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  text-decoration: none;  
+ 
+}
+.logo img{
+  border: 5px solid #fff;
+  padding-top: 0px;
+}
+
+.logo {
+  margin-right:500px;   
+}
+@media only screen and (max-width: 640px) {.logo {
+  margin-right:80px;
+  width: 100%;
+  
+}
+  }
+@media only screen and (min-width: 600px) {
+  .logo {
+   
+  margin-right:50px;
+}
+}
+@media only screen and (min-width: 768px) {
+  .logo {
+  margin-right:70px;
+}}
+
+@media only screen and (min-width: 992px) {
+  .logo {
+  margin-right:125px; 
+}
+}
+
+@media only screen and (min-width: 1200px) {
+  .logo {
+    margin-right:500px;
+  }
+}
+/* END HEADER + LOGO START ============================================================================*/
+
+/* START NAV (withen header) START******************************************************************************/
+
+nav{
+  display:flex;
+  margin: 0px 40px 0px 0px;
+  background-color: #414a4f;
+  height: 60px;
+}
+header ul{
+  min-width:30px;
+  /*if logp then use it padding-left:1%;
+  margin-left: 60px;*/
+}
+header nav{ display: flex;
+ flex-wrap: wrap;
+  padding-right:5%;
+  align-items: center;
+}
+header a, nav a{
+  text-decoration:none;
+  color:white;
+}
+header a:visited, nav a:visited{
+  text-decoration:none;
+  color:white;
+}
+nav li{
+  list-style: none;
+  margin-left:20px;
+  font-size: 18px;
+}
+section:nth-of-type(2n+3){
+  background-color: #f7f7f7;
+}
+@media all and (max-width: 640px){
+  header{
+    flex-direction: column;    
+  }
+  nav{
+    margin:-19.5px 20px 20px 20px; 
+    justify-content: center;
+    padding: 20px 0px 20px 0px;    
+  }  
+header h3{
+   margin-left: 0px;   
+}
+nav li{ 
+  font-size: 16px;
+}
+}
+/* END NAV (withen header) START =======================================================================*/
+/* STAER SHOWCASE START******************************************************************************/
+.showcase {
+  position: relative;
+  display: flexbox;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+ padding: 50px 0px 0px 0px;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  background-image: url("images/Edmonton-city-view.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  height:600px;
+  background-repeat: no-repeat;
+  text-align: center;
+  z-index: 1;
+  opacity: 5; 
+}
+
+.background_image:after{
+  content:"";
+  position:absolute;
+  background-size:cover;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color: #414a4f;
+  opacity:0.6;
+}
+@media (min-width: 401px) and (max-width: 1400px) {
+  .showcase {
+      margin-top: -8px;
+  }
+}
+@media all and (max-width: 400px) {
+  .showcase {
+      margin-top: -5px;
+      min-height: 95vh;
+      }
+}
+@media all and (max-width: 382px) {
+  .showcase {
+      margin-top: -50px;
+  }
+}
+@media all and (max-width: 500px) {
+  .showcase {
+      margin-top: -15px;
+      min-height: 95vh;
+  }
+}
+.textover {
+  width: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  position: absolute;
+  /*margin-top: 200px;*/
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  z-index: 5;
+  opacity: 5;
+}
+@media all and (max-width: 900px) {
+  .textover {
+      width: 80%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: auto;
+  }
+}
+
+.showcase,
+.textover h1 h2 {
+  text-align: center;
+  isolation:isolate; 
+}
+.textover h1 {
+ color: gold;
+  padding-top:100px;
+}
+.textover .highlight {
+  font-size: 50px;
+  text-shadow: 0 2px 0 gray;
+  Color: gold;
+}
+@media all and (max-width: 901px) {  
+.textover h1 { 
+  padding-top:50px;
+  font-size: 40px;
+}
+.textover h2 { 
+  padding-top:20px;
+  font-size: 30px;
+}
+}
+.textover h4 {
+  text-decoration: none;
+  color: white;
+}
+@media all and (max-width: 600px) {  
+  .textover h1 {   
+    padding-top:200px;
+    font-size: 35px;
+  }
+  .textover h2 {   
+    padding-top:50px;
+    font-size: 30px;
+  }  
+  }
+  @media all and (max-width: 553px) {  
+    .textover h1 {     
+      padding-top:175px;
+      font-size: 35px;
+    }
+    .textover h2 {     
+      padding-top:0px;
+      font-size: 30px;
+    }    
+    }
+
+  @media all and (max-width: 335px) {  
+    .textover h1 {     
+      padding-top:180px;
+      font-size: 35px;
+    }
+    .textover h2 {
+     margin: 0;
+      padding-top:0px;
+      font-size: 28px;
+    }  
+    .textover h4 {
+      margin: 0;
+       padding-bottom: 10px;
+       font-size: 18px;
+     }  
+    }
+
+/*END SHOWCASE END ================================================================= */
+
+/* FIRST & SECOND PEST INFO******************************************************************************/
+.pest-info-container{
+  display: flex;
+  justify-content:center;
+  align-items: center;  
+  margin: 0px;
+  padding-right:50px;
+  padding-left:50px; 
+}
+.pest-info{
+margin: 0px;
+width: 100%;
+padding:0;
+}
+.pest-info img{
+  max-width: 350px;
+  float: left;
+  border-radius: 10px;
+  border: 3px solid red ;
+  margin-right:30ox ;
+}
+.pest-info-text h2 {
+  padding: 0;
+}
+.pest-info-text h2 p {
+  text-align: justify;
+}
+
+.pest-info-text h3 p {
+  text-align: justify;
+}
+@media (max-width: 800px) {
+  .pest-info-container{    
+    padding-right:10px;
+    padding-left:10px;   
+  }
+  .pest-info{
+    margin: 0px;
+    width: 100%;    
+    padding: 10px;    
+    }
+    .pest-info-text h1 {
+      text-align: center;
+        }    
+    .pest-info-text h2 {
+      text-align: center;
+    }
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+.pestSR_container_heading {
+ padding: 0%;
+ margin: 0%;
+}
+.pestSR_container_heading h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pestSR_container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  text-align: center;
+  width:auto;
+  justify-content: center;
+  padding: 0%;
+ margin: 0%;
+}
+
+.pestSR_container .pest_inner_container{
+    background-color: aliceblue; 
+    margin: 20px;
+    margin-top: 50px;
+    width: 650px;
+    padding:20px;
+    height: auto;
+    /*line-height: 20px;*/    
+}
+
+@media (max-width: 1240px) {
+  
+.pestSR_container .pest_inner_container{
+  
+  width: 500px;
+   
+}
+}
+
+@media (max-width: 1164px) {
+  
+  .pestSR_container .pest_inner_container{
+    
+    width: 400px;
+     
+  }
+  }
+
+
+  @media (max-width: 965px) {
+  
+    .pestSR_container .pest_inner_container{
+      
+      width: 100%;
+       
+    }
+    }
+  
+
+.pestSR_container .pest_inner_container ul li{
+  list-style-position: outside;
+  text-align: left;
+  width: 100%;  
+}
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*MAIN IMAGE ================================================================= */
+.photo-container {
+  display: flex;
+  justify-content: center; 
+  background-color: white;
+  padding: 50px 50px 40px 50px;
+ flex-wrap: wrap;
+}
+
+.frame-square {  
+  padding-top: 20PX;
+  overflow: hidden;
+  position: relative;}
+
+.frame-square img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  height: auto;     
+  }
+
+/* START PEST CARDS START******************************************************************************/
+.container {
+ display: flex;
+ justify-content: center; 
+ background-color: white;
+ padding: 50px 50px 20px 50px;
+flex-wrap: wrap;
+}
+.card{
+  background-color: skyblue;
+  width: 400px;   
+  margin: 10px; 
+  border-radius: 15px;
+}
+.card-image {
+  height: 170px;
+  background-position: center center;
+  margin-bottom: 15px; 
+  margin-top: 30px;
+  background-size: cover; 
+  border-radius: 15px 15px 0 0;
+  width: 100%;   
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;  
+}
+.pest1{
+  background-image: url("images/mice-control-Edmonton2.webp");
+  width: 100%;
+  height: 170px; 
+  background-repeat: no-repeat;
+  background-size: contain;    
+}
+.pest2{
+  background-image: url("images/voles-pest-control-Edmonton.webp"); 
+  width: 100%;
+  height: 170px; 
+  background-repeat: no-repeat;
+  background-size: contain;
+ }
+.pest3{
+  background-image: url("images/Pocket-gopher-control.webp");   
+  width: 100%;
+  height: 170px; 
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card h3{
+  justify-content: center;
+  text-align: center;
+}
+.card p{
+  padding:10px;
+}
+.card a{
+  background-color: black;
+  color:white;
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  margin: 20px 50px;
+}
+.card:hover{
+  background-color: red;
+  color:white;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 1s ease;
+}
+@media (max-width: 800px) {
+  .container {    
+    padding: 20px 10px 10px 10px;  
+   }
+  .card{    
+    width: 80%;  
+    margin: 10px;    
+  }
+}
+/* END PEST CARDS END******************************************************************************/
+
+/* STAER CONTACT FORM START******************************************************************************/
+.form-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-top:100px;
+  margin-bottom: -120px;
+  margin-top: -200px;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+#contact {
+  background-color: cornflowerblue;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+fieldset {
+  border: medium none !important;
+  margin: 0 10px 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;   
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 90%; 
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.fast-contact {
+  text-align: center;
+  justify-content: center;
+}
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid black;
+}
+::-webkit-input-placeholder {
+  color: #888;
+}
+:-moz-placeholder {
+  color: #888;
+}
+::-moz-placeholder {
+  color: #888;
+}
+:-ms-input-placeholder {
+  color: #888;
+}
+@media (max-width:550px) {
+ 
+.form-container {
+  margin-top: -150px;
+  margin-bottom: -120px;
+}
+}
+/*END CONTACT FORM END ================================================================= */
+
+/*FOOTER =================================================================================  */
+.inner-footer{ 
+margin:0px;
+padding: 0px;
+background-color:black;
+}
+.quick-links{
+  display: flex;   
+  width: 100%;
+  max-width:560px;
+  height:70px;
+  padding-bottom: 40px;
+  margin: auto;
+}
+.quick-links ul{
+  display: flex;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding:10px;
+  display: flex;    
+}
+.quick-items{
+  list-style: none; 
+}
+.quick-items a{
+  list-style: none;
+  padding: 0px 15px;
+  font-size:18px;
+  text-decoration: none;
+  color:white;
+  transition:all .25s;
+}
+.quick-items a:hover{
+  color:red ;
+}
+.outer-footer{
+  padding: 10px 10px 70px 10px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  background-color: black;
+}
+.outer-footer p{
+  color: gold;
+  background-color: black;
+  font-size: 14px;
+}
+.outer-footer .copyright {
+font-size: 14px;
+}
+@media all and (max-width: 600px) {  
+  .outer-footer{
+    padding-bottom: 50px;    
+    padding-right:20px;
+    padding-left:20px;    
+  }
+  .quick-items a{
+  font-size:16px; 
+}
+}
+.copyright {
+  font-size: 14px;
+}
